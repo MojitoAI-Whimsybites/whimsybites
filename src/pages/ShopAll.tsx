@@ -8,17 +8,20 @@ const ShopAll = () => {
   const products = [
     {
       id: 1,
-      name: "Milk Chocolate",
+      name: "HALLOWEEN JACK-O-LANTERN CUPS",
+      subtitle: "30 PACKS | $39.99",
       image: productMilkChocolate,
     },
     {
       id: 2,
-      name: "Peanut Butter",
+      name: "HALLOWEEN SNACK-SIZE VARIETY BAG",
+      subtitle: "5 PACKS OF 30 BARS | $49.99",
       image: productPeanutButter,
     },
     {
       id: 3,
-      name: "Almond",
+      name: "CHOCOLATE MILK",
+      subtitle: "2 OPTIONS",
       image: productAlmond,
     },
   ];
@@ -73,10 +76,10 @@ const ShopAll = () => {
             {categories.map((category, index) => (
               <button
                 key={category}
-                className={`px-6 md:px-8 py-4 font-black text-sm md:text-base uppercase whitespace-nowrap border-r-4 border-black last:border-r-0 transition-colors ${
+                className={`px-6 md:px-8 py-4 font-black text-sm md:text-base uppercase whitespace-nowrap transition-colors italic ${
                   index === 0
-                    ? 'bg-orange text-white'
-                    : 'bg-[#F5E6D3] text-black hover:bg-orange hover:text-white'
+                    ? 'bg-[#4A2C2A] text-white'
+                    : 'bg-[#F5E6D3] text-black hover:bg-[#4A2C2A] hover:text-white'
                 }`}
                 style={{ fontFamily: "'Archivo Black', sans-serif" }}
               >
@@ -102,26 +105,83 @@ const ShopAll = () => {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-cyan thick-border rounded-3xl p-8 hover:scale-105 transition-transform cursor-pointer"
+                className="bg-cyan rounded-3xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+                style={{ border: '3px solid black' }}
               >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-auto"
-                />
+                {/* Product Image */}
+                <div className="p-8 pb-0">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-auto"
+                  />
+                </div>
+                
+                {/* Wavy divider */}
+                <div className="relative h-8 bg-cyan">
+                  <svg 
+                    className="absolute bottom-0 w-full" 
+                    viewBox="0 0 1200 120" 
+                    preserveAspectRatio="none"
+                    style={{ height: '30px' }}
+                  >
+                    <path 
+                      d="M0,0 Q150,40 300,0 T600,0 T900,0 T1200,0 L1200,120 L0,120 Z" 
+                      fill="#F5E6D3"
+                    />
+                  </svg>
+                </div>
+
+                {/* Product Info */}
+                <div className="bg-[#F5E6D3] p-6 space-y-4">
+                  <div className="space-y-1">
+                    <h3 
+                      className="text-black font-black text-lg uppercase leading-tight"
+                      style={{ fontFamily: "'Archivo Black', sans-serif" }}
+                    >
+                      {product.name}
+                    </h3>
+                    <p 
+                      className="text-black font-black text-sm"
+                      style={{ fontFamily: "'Archivo Black', sans-serif" }}
+                    >
+                      {product.subtitle}
+                    </p>
+                  </div>
+                  
+                  <button 
+                    className="w-full bg-[#D4FF00] hover:bg-[#C4EF00] text-black font-black text-base uppercase py-3 rounded-lg transition-colors italic"
+                    style={{ fontFamily: "'Archivo Black', sans-serif" }}
+                  >
+                    ADD TO BAG
+                  </button>
+                </div>
               </div>
             ))}
           </div>
 
           {/* Want it ASAP Banner */}
-          <div className="bg-cyan thick-border rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div 
+            className="bg-cyan rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+            style={{ border: '3px solid black' }}
+          >
             <h2 
-              className="text-white font-black text-3xl md:text-4xl uppercase text-center md:text-left text-outline-black"
-              style={{ fontFamily: "'Archivo Black', sans-serif" }}
+              className="text-white font-black text-3xl md:text-4xl uppercase text-center md:text-left italic"
+              style={{ 
+                fontFamily: "'Archivo Black', sans-serif",
+                WebkitTextStroke: '2px black',
+                paintOrder: 'stroke fill'
+              }}
             >
               WANT IT ASAP?
             </h2>
-            <button className="bg-orange hover:bg-orange/90 text-white font-black text-lg uppercase px-12 py-4 rounded-xl thick-border whitespace-nowrap transition-colors">
+            <button 
+              className="bg-[#FF1493] hover:bg-[#E6127D] text-black font-black text-lg uppercase px-12 py-4 rounded-xl whitespace-nowrap transition-colors italic"
+              style={{ 
+                fontFamily: "'Archivo Black', sans-serif",
+                border: '3px solid black'
+              }}
+            >
               FIND A STORE
             </button>
           </div>
