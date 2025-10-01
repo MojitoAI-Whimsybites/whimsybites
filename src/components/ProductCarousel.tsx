@@ -42,16 +42,13 @@ const products = [
 const ProductCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const scrollToProduct = (index: number) => {
     setCurrentIndex(index);
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const cardWidth = 288 + 24; // w-72 (288px) + gap-6 (24px)
-      container.scrollTo({
-        left: cardWidth * index,
-        behavior: 'smooth'
-      });
+    const el = itemRefs.current[index];
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
     }
   };
 
@@ -75,16 +72,17 @@ const ProductCarousel = () => {
               Shop All
             </button>
           </div>
-
+                  
           {/* Product carousel */}
-          <div className="relative">
+          <div className="relative min-w-0 overflow-hidden">
             <div 
               ref={scrollContainerRef}
-              className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+              className="flex gap-6 overflow-x-auto overflow-y-hidden w-full max-w-full min-w-0 pb-4 snap-x snap-mandatory scrollbar-hide"
             >
-              {products.map((product) => (
+              {products.map((product, index) => (
                 <div
                   key={product.id}
+                  ref={(el) => (itemRefs.current[index] = el)}
                   className="flex-shrink-0 w-72 bg-white rounded-2xl thick-border p-6 snap-start"
                 >
                   <div className="space-y-4">
