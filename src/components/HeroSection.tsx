@@ -2,7 +2,7 @@ import heroProducts from "@/assets/hero-products.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] bg-purple overflow-hidden border-b-[6px] border-orange">
+    <section className="relative min-h-screen bg-purple overflow-hidden border-b-[6px] border-orange flex items-center">
       {/* Circular wave patterns */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%]">

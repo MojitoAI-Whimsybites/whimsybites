@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import milkChocolate from "@/assets/product-milk-chocolate.jpg";
 import hazelnut from "@/assets/product-hazelnut.jpg";
 import peanutButter from "@/assets/product-peanut-butter.jpg";
@@ -41,6 +41,19 @@ const products = [
 
 const ProductCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProduct = (index: number) => {
+    setCurrentIndex(index);
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const cardWidth = 288 + 24; // w-72 (288px) + gap-6 (24px)
+      container.scrollTo({
+        left: cardWidth * index,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <section className="bg-cyan py-16 border-b-[6px] border-orange">
@@ -65,7 +78,10 @@ const ProductCarousel = () => {
 
           {/* Product carousel */}
           <div className="relative">
-            <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+            <div 
+              ref={scrollContainerRef}
+              className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+            >
               {products.map((product) => (
                 <div
                   key={product.id}
@@ -104,7 +120,7 @@ const ProductCarousel = () => {
               {products.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => scrollToProduct(index)}
                   className={`w-3 h-3 rounded-full thick-border transition-all ${
                     index === currentIndex
                       ? "bg-black scale-125"

@@ -141,13 +141,13 @@ const Footer = () => {
                   Snacks, sweeps, surprises straight to your inbox.
                 </p>
                 
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="email"
                     placeholder="ENTER EMAIL"
-                    className="flex-1 px-4 py-3 rounded-lg thick-border font-bold text-sm"
+                    className="flex-1 px-4 py-3 rounded-lg thick-border font-bold text-sm min-w-0"
                   />
-                  <button className="bg-cyan hover:bg-cyan-dark text-white font-black text-sm uppercase px-6 py-3 rounded-lg thick-border">
+                  <button className="bg-cyan hover:bg-cyan-dark text-white font-black text-sm uppercase px-6 py-3 rounded-lg thick-border whitespace-nowrap">
                     Sign Up
                   </button>
                 </div>
