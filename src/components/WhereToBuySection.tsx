@@ -18,14 +18,7 @@ const WhereToBuySection = () => {
 
   return (
     <section className="relative bg-purple py-16 overflow-hidden border-b-4 border-black">
-      {/* Orange wavy top border */}
-      <div className="absolute top-0 w-full h-12 bg-orange overflow-hidden">
-        <svg className="absolute top-0 w-full h-16" preserveAspectRatio="none" viewBox="0 0 1440 60">
-          <path d="M0,30 Q360,50 720,30 T1440,30 L1440,0 L0,0 Z" fill="hsl(var(--purple-primary))" />
-        </svg>
-      </div>
-
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10 mt-8">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         <div className="thick-border bg-orange-light rounded-3xl p-8 md:p-16 relative overflow-hidden">
           {/* Background "STAY SWEET" text pattern */}
           <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
@@ -48,7 +41,7 @@ const WhereToBuySection = () => {
               {retailers.map((retailer, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl thick-border p-8 flex items-center justify-center hover:scale-105 transition-transform cursor-pointer min-h-[120px]"
+                  className="bg-white rounded-2xl thin-border p-8 flex items-center justify-center hover:scale-105 transition-transform cursor-pointer min-h-[120px]"
                 >
                   <img 
                     src={retailer.logo} 
@@ -59,7 +52,7 @@ const WhereToBuySection = () => {
               ))}
               
               {/* Costco spanning full width */}
-              <div className="md:col-span-3 bg-white rounded-2xl thick-border p-8 flex items-center justify-center hover:scale-105 transition-transform cursor-pointer min-h-[120px]">
+              <div className="md:col-span-3 bg-white rounded-2xl thin-border p-8 flex items-center justify-center hover:scale-105 transition-transform cursor-pointer min-h-[120px]">
                 <img 
                   src={costcoLogo} 
                   alt="Costco"
@@ -69,14 +62,14 @@ const WhereToBuySection = () => {
             </div>
 
             <div className="text-center space-y-6">
-              <p className="text-white font-black text-6xl md:text-8xl uppercase text-outline-black" style={{ 
+              <p className="text-white font-black text-4xl md:text-5xl uppercase text-outline-black" style={{ 
                 fontFamily: "'Archivo Black', sans-serif",
                 WebkitTextStroke: '3px black',
                 paintOrder: 'stroke fill'
               }}>
                 & MORE
               </p>
-              <button className="bg-purple hover:bg-purple-dark text-white font-black text-xl md:text-2xl uppercase px-16 py-5 rounded-xl thick-border transform hover:scale-105 transition-transform italic">
+              <button className="bg-purple hover:bg-purple-dark text-white font-black text-xl md:text-2xl uppercase px-16 py-5 rounded-xl thin-border transform hover:scale-105 transition-transform italic">
                 Find a Store
               </button>
             </div>

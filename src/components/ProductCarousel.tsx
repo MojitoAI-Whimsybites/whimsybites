@@ -69,7 +69,7 @@ const ProductCarousel = () => {
               <p className="text-black font-bold text-lg">
                 Show you care how your chocolate is sourced
               </p>
-              <button className="bg-cyan-dark hover:bg-cyan text-white font-black text-xl uppercase px-10 py-4 rounded-xl thick-border transform hover:scale-105 transition-transform italic">
+              <button className="bg-cyan-dark hover:bg-cyan text-white font-black text-xl uppercase px-10 py-4 rounded-xl thin-border transform hover:scale-105 transition-transform italic">
                 Shop All
               </button>
             </div>
@@ -85,9 +85,9 @@ const ProductCarousel = () => {
                   <div
                     key={product.id}
                     ref={(el) => (itemRefs.current[index] = el)}
-                    className="flex-shrink-0 w-80 bg-white rounded-2xl thick-border p-6 snap-start"
+                    className="flex-shrink-0 w-80 bg-white rounded-2xl thin-border p-6 snap-start"
                   >
-                    <div className="space-y-4">
+                    <div className="flex flex-col h-full space-y-4">
                       <div className="relative h-96 flex items-center justify-center bg-gradient-to-b from-cyan/10 to-transparent rounded-xl overflow-hidden">
                         <img
                           src={product.image}
@@ -96,7 +96,7 @@ const ProductCarousel = () => {
                         />
                       </div>
                       
-                      <div className="text-center space-y-2">
+                      <div className="text-center space-y-2 flex-grow flex flex-col justify-center min-h-[100px]">
                         <h3 className="text-black font-black text-2xl uppercase" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
                           {product.name}
                         </h3>
@@ -106,7 +106,7 @@ const ProductCarousel = () => {
                       </div>
 
                       <button
-                        className={`w-full ${product.buttonColor} text-white font-black text-sm uppercase px-6 py-4 rounded-xl thick-border transform hover:scale-105 transition-transform`}
+                        className={`w-full ${product.buttonColor} text-white font-black text-sm uppercase px-6 py-4 rounded-xl thin-border transform hover:scale-105 transition-transform`}
                       >
                         {product.buttonText}
                       </button>
@@ -121,7 +121,7 @@ const ProductCarousel = () => {
                   <button
                     key={index}
                     onClick={() => scrollToProduct(index)}
-                    className={`w-3 h-3 rounded-full thick-border transition-all ${
+                    className={`w-3 h-3 rounded-full thin-border transition-all ${
                       index === currentIndex
                         ? "bg-black scale-125"
                         : "bg-white hover:bg-gray-300"

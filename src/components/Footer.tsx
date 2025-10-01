@@ -1,5 +1,4 @@
 import { Instagram } from "lucide-react";
-import shopifyLogo from "@/assets/logos/shopify.png";
 
 const Footer = () => {
   return (
@@ -60,7 +59,7 @@ const Footer = () => {
                     <a
                       key={i}
                       href="#"
-                      className="w-12 h-12 bg-white rounded-full thick-border flex items-center justify-center hover:bg-cyan transition-colors"
+                      className="w-12 h-12 bg-white rounded-full thin-border flex items-center justify-center hover:bg-cyan transition-colors"
                     >
                       <Instagram size={24} className="text-black" />
                     </a>
@@ -79,9 +78,9 @@ const Footer = () => {
                     <input
                       type="email"
                       placeholder="ENTER EMAIL"
-                      className="w-full px-4 py-3 rounded-lg thick-border font-bold text-sm uppercase placeholder:text-gray-500"
+                      className="w-full px-4 py-3 rounded-lg thin-border font-bold text-sm uppercase placeholder:text-gray-500"
                     />
-                    <button className="w-full bg-cyan hover:bg-cyan-dark text-white font-black text-sm uppercase px-8 py-3 rounded-lg thick-border whitespace-nowrap">
+                    <button className="w-full bg-cyan hover:bg-cyan-dark text-white font-black text-sm uppercase px-8 py-3 rounded-lg thin-border whitespace-nowrap">
                       Sign Up
                     </button>
                   </div>
@@ -104,14 +103,11 @@ const Footer = () => {
                 WhimsyBites
               </div>
               
-              <div className="flex flex-col items-center gap-3">
+              <div className="text-center">
                 <p className="text-black font-bold text-sm">2025 WhimsyBites</p>
-                <div className="flex items-center gap-2">
-                  <span className="text-black font-black text-sm uppercase" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
-                    POWERED BY
-                  </span>
-                  <img src={shopifyLogo} alt="Shopify" className="h-6 w-auto" />
-                </div>
+                <p className="text-black font-black text-sm mt-1 uppercase" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
+                  POWERED BY SHOPIFY
+                </p>
               </div>
 
               <div className="flex flex-wrap gap-3 justify-center text-xs">

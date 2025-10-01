@@ -45,7 +45,7 @@ const HeroSection = () => {
               This Holiday, enter for a chance to win amazing sweet prizes
             </p>
 
-            <button className="bg-orange hover:bg-orange-dark text-black font-black text-xl md:text-2xl uppercase px-14 py-5 rounded-xl thick-border transform hover:scale-105 transition-transform italic">
+            <button className="bg-orange hover:bg-orange-dark text-black font-black text-xl md:text-2xl uppercase px-14 py-5 rounded-xl thin-border transform hover:scale-105 transition-transform italic">
               Enter If You Dare
             </button>
           </div>
@@ -55,7 +55,7 @@ const HeroSection = () => {
             <img
               src={heroDisplay}
               alt="WhimsyBites Holiday Products"
-              className="w-full h-auto rounded-3xl thick-border"
+              className="w-full h-auto rounded-3xl thin-border"
             />
           </div>
         </div>
