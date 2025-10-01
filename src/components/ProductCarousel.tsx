@@ -58,7 +58,7 @@ const ProductCarousel = () => {
         <div className="grid md:grid-cols-[300px_1fr] gap-8 items-center">
           {/* Left side text */}
           <div className="space-y-4">
-            <h2 className="text-black font-black text-4xl uppercase leading-tight">
+            <h2 className="text-black font-black text-4xl uppercase leading-tight" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
               Shop Our
               <br />
               World's Best

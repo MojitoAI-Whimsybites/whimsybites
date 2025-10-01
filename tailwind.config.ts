@@ -49,7 +49,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Arial', 'Helvetica', 'sans-serif'],
+        sans: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
+        display: ['Archivo Black', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

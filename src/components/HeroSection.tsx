@@ -19,28 +19,20 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bat decorations */}
-      <div className="absolute top-[15%] left-[20%] text-6xl animate-bounce">
-        🦇
-      </div>
-      <div className="absolute top-[20%] right-[30%] text-5xl animate-bounce" style={{ animationDelay: '0.5s' }}>
-        🦇
-      </div>
-
       <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left content */}
           <div className="text-center md:text-left space-y-6">
             <div className="space-y-2">
-              <h2 className="text-white font-black text-3xl uppercase tracking-wider text-outline-black">
+              <h2 className="text-white font-black text-3xl uppercase tracking-wider text-outline-black" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
                 WhimsyBites
               </h2>
-              <h1 className="text-orange font-black text-7xl uppercase leading-none text-outline-black italic transform -skew-y-2">
+              <h1 className="text-orange font-black text-7xl uppercase leading-none text-outline-black italic transform -skew-y-2" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
                 Sweet
                 <br />
                 Surprise
               </h1>
-              <h2 className="text-white font-black text-4xl uppercase tracking-wide text-outline-black">
+              <h2 className="text-white font-black text-4xl uppercase tracking-wide text-outline-black" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
                 Sweeps
               </h2>
             </div>

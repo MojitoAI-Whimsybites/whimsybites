@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Shop Column */}
           <div>
-            <h3 className="text-cyan font-black text-xl uppercase mb-4">Shop</h3>
+            <h3 className="text-cyan font-black text-xl uppercase mb-4" style={{ fontFamily: "'Archivo Black', sans-serif" }}>Shop</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-purple font-bold italic hover:text-purple-dark transition-colors">
@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Info Column */}
           <div>
-            <h3 className="text-cyan font-black text-xl uppercase mb-4">Info</h3>
+            <h3 className="text-cyan font-black text-xl uppercase mb-4" style={{ fontFamily: "'Archivo Black', sans-serif" }}>Info</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-purple font-bold italic hover:text-purple-dark transition-colors">
@@ -86,7 +86,7 @@ const Footer = () => {
 
           {/* Get to Know Us Column */}
           <div>
-            <h3 className="text-cyan font-black text-xl uppercase mb-4">
+            <h3 className="text-cyan font-black text-xl uppercase mb-4" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
               Get to Know Us
             </h3>
             <ul className="space-y-2">
@@ -163,7 +163,7 @@ const Footer = () => {
         {/* Logo and Bottom */}
         <div className="border-t-4 border-black pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-white font-black text-4xl uppercase">
+            <div className="text-white font-black text-4xl uppercase" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
               WhimsyBites
             </div>
             

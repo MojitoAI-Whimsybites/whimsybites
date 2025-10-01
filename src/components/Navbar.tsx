@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-white font-black text-2xl uppercase tracking-tight">
+            <div className="text-white font-black text-2xl uppercase tracking-tight" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
               WhimsyBites
             </div>
           </div>
