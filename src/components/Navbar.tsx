@@ -1,5 +1,6 @@
 import { ShoppingCart, MapPin, User, HelpCircle, Menu, X, Flag, Smile } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,9 +18,9 @@ const Navbar = () => {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="/shop-all" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
+            <Link to="/shop-all" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Shop
-            </a>
+            </Link>
             <a href="#story" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Our Story
             </a>
@@ -66,9 +67,9 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t-2 border-orange">
             <div className="flex flex-col space-y-3">
-              <a href="/shop-all" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/shop-all" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Shop
-              </a>
+              </Link>
               <a href="#story" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Our Story
               </a>
