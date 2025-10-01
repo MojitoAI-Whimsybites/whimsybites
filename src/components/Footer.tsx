@@ -68,7 +68,7 @@ const Footer = () => {
 
                 <div>
                   <h4 className="text-black font-black text-lg uppercase mb-2" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
-                    Text Sweet to 70616
+                    Text Sweet to 12345
                   </h4>
                   <p className="text-black font-bold text-xs mb-4 uppercase">
                     Snacks, sweeps, surprises straight to your inbox.

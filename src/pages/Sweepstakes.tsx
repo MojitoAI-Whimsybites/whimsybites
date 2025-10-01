@@ -11,10 +11,6 @@ const Sweepstakes = () => {
         <div className="grid lg:grid-cols-2 min-h-screen">
           {/* Left side - Beige content area */}
           <div className="bg-[#F5E6D3] p-8 md:p-16 flex flex-col justify-center relative">
-            {/* Decorative bats */}
-            <div className="absolute top-8 right-12 text-4xl opacity-70">🦇</div>
-            <div className="absolute top-32 left-8 text-3xl opacity-60">🦇</div>
-            
             {/* Header Box */}
             <div className="bg-orange thick-border rounded-2xl p-8 mb-12 relative">
               <h1 className="text-white font-black text-4xl md:text-5xl uppercase leading-tight text-center text-outline-black" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
