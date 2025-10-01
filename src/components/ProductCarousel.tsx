@@ -53,7 +53,7 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section className="bg-cyan border-b-[6px] border-orange">
+    <section className="bg-cyan">
       {/* Top banner */}
       <div className="bg-cyan border-b-4 border-orange py-3 px-6">
         <div className="container mx-auto">

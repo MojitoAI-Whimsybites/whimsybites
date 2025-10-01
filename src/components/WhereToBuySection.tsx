@@ -17,7 +17,7 @@ const WhereToBuySection = () => {
   ];
 
   return (
-    <section className="relative bg-purple py-16 border-b-[6px] border-orange overflow-hidden">
+    <section className="relative bg-purple py-16 overflow-hidden">
       {/* Orange wavy top border */}
       <div className="absolute top-0 w-full h-12 bg-orange overflow-hidden">
         <svg className="absolute top-0 w-full h-16" preserveAspectRatio="none" viewBox="0 0 1440 60">
@@ -34,13 +34,6 @@ const WhereToBuySection = () => {
             </div>
           </div>
 
-          {/* Bat decorations */}
-          <div className="absolute top-8 left-12 text-5xl opacity-60">
-            🦇
-          </div>
-          <div className="absolute bottom-12 right-16 text-5xl opacity-60">
-            🦇
-          </div>
 
           <div className="text-center space-y-12 relative z-10">
             <h2 className="text-white font-black text-6xl md:text-8xl uppercase text-outline-black" style={{ 

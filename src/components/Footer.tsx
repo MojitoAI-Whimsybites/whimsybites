@@ -2,7 +2,7 @@ import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black py-8 border-t-8 border-cyan">
+    <footer className="bg-black py-8">
       <div className="container mx-auto px-6 md:px-12">
         <div className="bg-orange rounded-3xl thick-border p-8 md:p-12">
           <div className="grid md:grid-cols-[1fr_1fr_1fr_1.5fr] gap-8 mb-12">
@@ -74,7 +74,7 @@ const Footer = () => {
                     Snacks, sweeps, surprises straight to your inbox.
                   </p>
                   
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <input
                       type="email"
                       placeholder="ENTER EMAIL"

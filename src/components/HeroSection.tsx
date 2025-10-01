@@ -2,7 +2,7 @@ import heroDisplay from "@/assets/hero-display.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-purple overflow-hidden border-b-[6px] border-orange border-t-[6px] flex items-center">
+    <section className="relative min-h-screen bg-purple overflow-hidden flex items-center">
       {/* Circular wave patterns - darker purple waves */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%]">
@@ -20,16 +20,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bat decorations */}
-      <div className="absolute top-[15%] left-[15%] text-5xl opacity-80">
-        🦇
-      </div>
-      <div className="absolute top-[20%] right-[25%] text-5xl opacity-80">
-        🦇
-      </div>
 
       <div className="container mx-auto px-6 py-16 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid xl:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center md:text-left space-y-8">
             <div className="space-y-3">
@@ -62,7 +55,7 @@ const HeroSection = () => {
             <img
               src={heroDisplay}
               alt="WhimsyBites Holiday Products"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-3xl thick-border"
             />
           </div>
         </div>
