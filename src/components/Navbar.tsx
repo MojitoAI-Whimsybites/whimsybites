@@ -17,7 +17,7 @@ const Navbar = () => {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#shop" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
+            <a href="/shop-all" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Shop
             </a>
             <a href="#story" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
@@ -66,7 +66,7 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t-2 border-orange">
             <div className="flex flex-col space-y-3">
-              <a href="#shop" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
+              <a href="/shop-all" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Shop
               </a>
               <a href="#story" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
