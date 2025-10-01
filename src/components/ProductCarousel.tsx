@@ -53,27 +53,7 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section className="bg-cyan">
-      {/* Top banner */}
-      <div className="bg-cyan border-b-4 border-orange py-3 px-6">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-white font-black text-sm md:text-base uppercase">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span>Strawberry Chocolate Exclusively At</span>
-              <span className="text-white">Walmart ★</span>
-              <span className="text-white">7-ELEVEN</span>
-              <span className="text-white italic">Speedway</span>
-            </div>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span>Holiday Specials Exclusively At</span>
-              <span className="text-white">⊙ TARGET</span>
-              <span className="text-white">7-ELEVEN</span>
-              <span className="text-white italic">Speedway</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <section className="bg-cyan border-b-4 border-black">
       <div className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-[350px_1fr] gap-8 items-start">
@@ -155,12 +135,6 @@ const ProductCarousel = () => {
         </div>
       </div>
 
-      {/* Purple wavy bottom border */}
-      <div className="relative h-16 bg-purple overflow-hidden">
-        <svg className="absolute bottom-0 w-full h-20" preserveAspectRatio="none" viewBox="0 0 1440 60">
-          <path d="M0,30 Q360,10 720,30 T1440,30 L1440,60 L0,60 Z" fill="hsl(var(--cyan-primary))" />
-        </svg>
-      </div>
     </section>
   );
 };

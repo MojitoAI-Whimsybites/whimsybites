@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import shopifyLogo from "@/assets/logos/shopify.png";
 
 const Footer = () => {
   return (
@@ -74,13 +75,13 @@ const Footer = () => {
                     Snacks, sweeps, surprises straight to your inbox.
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-2">
+                  <div className="flex flex-col gap-2">
                     <input
                       type="email"
                       placeholder="ENTER EMAIL"
-                      className="flex-1 px-4 py-3 rounded-lg thick-border font-bold text-sm min-w-0 uppercase placeholder:text-gray-500"
+                      className="w-full px-4 py-3 rounded-lg thick-border font-bold text-sm uppercase placeholder:text-gray-500"
                     />
-                    <button className="bg-cyan hover:bg-cyan-dark text-white font-black text-sm uppercase px-8 py-3 rounded-lg thick-border whitespace-nowrap">
+                    <button className="w-full bg-cyan hover:bg-cyan-dark text-white font-black text-sm uppercase px-8 py-3 rounded-lg thick-border whitespace-nowrap">
                       Sign Up
                     </button>
                   </div>
@@ -103,11 +104,14 @@ const Footer = () => {
                 WhimsyBites
               </div>
               
-              <div className="text-center">
+              <div className="flex flex-col items-center gap-3">
                 <p className="text-black font-bold text-sm">2025 WhimsyBites</p>
-                <p className="text-cyan text-xs mt-1">
-                  <a href="#" className="underline">Powered by Shopify</a>
-                </p>
+                <div className="flex items-center gap-2">
+                  <span className="text-black font-black text-sm uppercase" style={{ fontFamily: "'Archivo Black', sans-serif" }}>
+                    POWERED BY
+                  </span>
+                  <img src={shopifyLogo} alt="Shopify" className="h-6 w-auto" />
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-3 justify-center text-xs">

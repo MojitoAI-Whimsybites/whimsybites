@@ -2,7 +2,7 @@ import heroDisplay from "@/assets/hero-display.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-purple overflow-hidden flex items-center">
+    <section className="relative min-h-screen bg-purple overflow-hidden flex items-center border-b-4 border-black">
       {/* Circular wave patterns - darker purple waves */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%]">

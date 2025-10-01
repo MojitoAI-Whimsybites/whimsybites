@@ -17,7 +17,7 @@ const WhereToBuySection = () => {
   ];
 
   return (
-    <section className="relative bg-purple py-16 overflow-hidden">
+    <section className="relative bg-purple py-16 overflow-hidden border-b-4 border-black">
       {/* Orange wavy top border */}
       <div className="absolute top-0 w-full h-12 bg-orange overflow-hidden">
         <svg className="absolute top-0 w-full h-16" preserveAspectRatio="none" viewBox="0 0 1440 60">
@@ -69,9 +69,10 @@ const WhereToBuySection = () => {
             </div>
 
             <div className="text-center space-y-6">
-              <p className="text-white font-black text-3xl uppercase tracking-wider" style={{ 
+              <p className="text-white font-black text-6xl md:text-8xl uppercase text-outline-black" style={{ 
                 fontFamily: "'Archivo Black', sans-serif",
-                WebkitTextStroke: '2px black'
+                WebkitTextStroke: '3px black',
+                paintOrder: 'stroke fill'
               }}>
                 & MORE
               </p>
