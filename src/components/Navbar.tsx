@@ -1,4 +1,4 @@
-import { ShoppingCart, MapPin, User, HelpCircle, Menu, X } from "lucide-react";
+import { ShoppingCart, MapPin, User, HelpCircle, Menu, X, Flag, Smile } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -15,43 +15,34 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Navigation Links - Desktop Only (xl breakpoint) */}
-          <div className="hidden xl:flex space-x-8">
-            <a
-              href="#shop"
-              className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-            >
+          {/* Navigation Links - Desktop */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <a href="#shop" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Shop
             </a>
-            <a
-              href="#story"
-              className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-            >
+            <a href="#story" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Our Story
             </a>
-            <a
-              href="#sourcing"
-              className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-            >
+            <a href="#sourcing" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Ethical Sourcing
             </a>
-            <a
-              href="#worldwide"
-              className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-            >
+            <a href="#worldwide" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic">
               Available Worldwide
             </a>
           </div>
 
-          {/* Icons and Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            <button className="hidden sm:block text-white hover:text-orange transition-colors">
+          {/* Icons */}
+          <div className="flex items-center space-x-3">
+            <button className="hidden md:flex w-10 h-10 text-white hover:text-orange transition-colors items-center justify-center">
               <HelpCircle size={24} />
             </button>
-            <button className="hidden sm:block text-white hover:text-orange transition-colors">
-              <User size={24} />
+            <button className="hidden md:flex w-10 h-10 text-white hover:text-orange transition-colors items-center justify-center">
+              <Flag size={24} />
             </button>
-            <button className="hidden sm:block text-white hover:text-orange transition-colors">
+            <button className="hidden md:flex w-10 h-10 text-white hover:text-orange transition-colors items-center justify-center">
+              <Smile size={24} />
+            </button>
+            <button className="hidden md:flex w-10 h-10 text-white hover:text-orange transition-colors items-center justify-center">
               <MapPin size={24} />
             </button>
             <button className="text-white hover:text-orange transition-colors relative">
@@ -63,7 +54,7 @@ const Navbar = () => {
             
             {/* Mobile Menu Button */}
             <button
-              className="xl:hidden text-white hover:text-orange transition-colors"
+              className="lg:hidden text-white hover:text-orange transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,49 +64,20 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="xl:hidden py-4 border-t-2 border-orange">
+          <div className="lg:hidden py-4 border-t-2 border-orange">
             <div className="flex flex-col space-y-3">
-              <a
-                href="#shop"
-                className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <a href="#shop" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Shop
               </a>
-              <a
-                href="#story"
-                className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <a href="#story" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Our Story
               </a>
-              <a
-                href="#sourcing"
-                className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <a href="#sourcing" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Ethical Sourcing
               </a>
-              <a
-                href="#worldwide"
-                className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <a href="#worldwide" className="text-white font-bold uppercase text-sm hover:text-orange transition-colors italic" onClick={() => setMobileMenuOpen(false)}>
                 Available Worldwide
               </a>
-              
-              {/* Mobile Icons */}
-              <div className="flex gap-4 pt-2 sm:hidden">
-                <button className="text-white hover:text-orange transition-colors">
-                  <HelpCircle size={24} />
-                </button>
-                <button className="text-white hover:text-orange transition-colors">
-                  <User size={24} />
-                </button>
-                <button className="text-white hover:text-orange transition-colors">
-                  <MapPin size={24} />
-                </button>
-              </div>
             </div>
           </div>
         )}
