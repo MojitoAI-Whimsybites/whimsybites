@@ -14,8 +14,15 @@ const TwoWaysSection = () => {
       {/* Content */}
       <div className="grid md:grid-cols-2 bg-cyan">
         {/* Chocolate Milk */}
-        <div className="relative p-12 flex flex-col items-center justify-center border-r-[6px] border-black">
+        <div className="relative p-12 flex flex-col items-center justify-center">
           <div className="absolute inset-0 bg-gradient-radial from-cyan/50 to-cyan" />
+          
+          {/* Decorative wavy divider - hidden on mobile, shown on desktop */}
+          <div className="hidden md:block absolute right-0 top-0 bottom-0 w-8">
+            <svg className="h-full w-full" preserveAspectRatio="none" viewBox="0 0 32 800">
+              <path d="M0,0 Q16,100 0,200 T0,400 T0,600 T0,800 L32,800 L32,0 Z" fill="hsl(var(--cyan-primary))" opacity="0.3"/>
+            </svg>
+          </div>
           
           <div className="relative z-10 text-center space-y-6 max-w-md">
             <h3 className="text-white font-black text-4xl uppercase leading-tight text-outline-black">

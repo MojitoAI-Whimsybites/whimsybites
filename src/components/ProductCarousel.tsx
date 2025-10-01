@@ -114,16 +114,17 @@ const ProductCarousel = () => {
             </div>
 
             {/* Carousel dots */}
-            <div className="flex justify-center gap-2 mt-6">
+            <div className="flex justify-center gap-2 mt-6 pb-2">
               {products.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToProduct(index)}
                   className={`w-3 h-3 rounded-full thick-border transition-all ${
                     index === currentIndex
-                      ? "bg-black scale-125"
+                      ? "bg-black scale-125 mb-0.5"
                       : "bg-white hover:bg-gray-300"
                   }`}
+                  aria-label={`Go to product ${index + 1}`}
                 />
               ))}
             </div>
