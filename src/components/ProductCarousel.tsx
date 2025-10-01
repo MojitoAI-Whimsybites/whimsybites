@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import strawberry from "@/assets/product-strawberry.jpg";
 import caramel from "@/assets/product-caramel.jpg";
 import almond from "@/assets/product-almond.jpg";
@@ -69,9 +70,9 @@ const ProductCarousel = () => {
               <p className="text-black font-bold text-lg">
                 Show you care how your chocolate is sourced
               </p>
-              <button className="bg-cyan-dark hover:bg-cyan text-white font-black text-xl uppercase px-10 py-4 rounded-xl thin-border transform hover:scale-105 transition-transform italic">
+              <Link to="/shop-all" className="bg-cyan-dark hover:bg-cyan text-white font-black text-xl uppercase px-10 py-4 rounded-xl thin-border transform hover:scale-105 transition-transform italic inline-block text-center">
                 Shop All
-              </button>
+              </Link>
             </div>
                     
             {/* Product carousel */}
