@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import heroDisplay from "@/assets/hero-display.jpg";
+import { MojitoVariant } from "@mojito-ai/react";
 
 const HeroSection = () => {
   return (
@@ -49,7 +50,7 @@ const HeroSection = () => {
             <Link 
               to="/sweepstakes"
               className="inline-block bg-orange hover:bg-orange-dark text-black font-black text-xl md:text-2xl uppercase px-14 py-5 rounded-xl thin-border transform hover:scale-105 transition-transform italic"
-            >
+              >
               Enter If You Dare
             </Link>
           </div>

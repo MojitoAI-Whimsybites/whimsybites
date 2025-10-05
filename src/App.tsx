@@ -1,3 +1,6 @@
+;(globalThis as any).__MOJITO_ENABLED__ = '1'
+;(globalThis as any).__MOJITO_DEBUG__ = true
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
